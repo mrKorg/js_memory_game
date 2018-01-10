@@ -6,7 +6,6 @@ window.onload = function () {
         items: [],
         imagesArray: [],
         gameHtml: '',
-        resultHtml: '',
         selected: {
             item_1: {
                 id: null,
@@ -91,7 +90,7 @@ window.onload = function () {
                             }, 1500);
                         }
                         if (data.selected.item_1.str !== null && data.selected.item_2.str !== null && data.selected.item_1.str === data.selected.item_2.str) {
-                            checkSelected(data.selected.item_1.id, data.selected.item_2.id);
+                            moveSelected(data.selected.item_1.id, data.selected.item_2.id);
                             data.selected.item_1 = data.selected.item_2 = {
                                 id: null,
                                 str: null
@@ -103,7 +102,7 @@ window.onload = function () {
         }
     }
 
-    function checkSelected(item_id_1, item_id_2) {
+    function moveSelected(item_id_1, item_id_2) {
         data.identified.push(data.imagesArray[item_id_1]);
         let cart1 = document.getElementById('cart-' + item_id_1);
         let cart2 = document.getElementById('cart-' + item_id_2);
