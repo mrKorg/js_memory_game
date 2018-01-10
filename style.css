@@ -44,7 +44,7 @@
     width: 100px;
     height: 100px;
     cursor: pointer;
-    transition: background .5s ease;
+    transition: background .3s ease;
 }
 .cart:hover {
     background: #ccc;
@@ -58,7 +58,7 @@
     -webkit-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    transition: transform .5s ease;
+    transition: transform .3s ease;
     backface-visibility: hidden;
 }
 .result .cart img,
